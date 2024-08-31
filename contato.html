@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com o Restaurante Italiano.">
+    <title>Restaurante Italiano - Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="horarios.html">Horarios</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Contato</h1>
+            <form action="processa_contato.php" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferências</legend>
+                    <label for="contato">Forma de contato:</label>
+                    <select id="contato" name="contato">
+                        <option value="email">Email</option>
+                        <option value="telefone">Telefone</option>
+                    </select>
+
+                    <label>Deseja receber promoções?</label>
+                    <input type="radio" id="sim" name="promocoes" value="sim">
+                    <label for="sim">Sim</label>
+                    <input type="radio" id="nao" name="promocoes" value="nao">
+                    <label for="nao">Não</label>
+                    
+                    <label for="interesses">Interesses:</label>
+                    <input type="checkbox" id="pizza" name="interesses" value="pizza">
+                    <label for="pizza">Pizza</label>
+                    <input type="checkbox" id="pasta" name="interesses" value="pasta">
+                    <label for="pasta">Pasta</label>
+                </fieldset>
+
+                <label for="arquivo">Anexar arquivo:</label>
+                <input type="file" id="arquivo" name="arquivo" accept=".jpg, .jpeg, .png, .pdf" multiple>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restaurante Italiano. Todos os direitos reservados.</p>
+    </footer>
+</body
